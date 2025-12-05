@@ -7,7 +7,7 @@
     "cy:open": "cypress open",
     "cy:run": "cypress run --headless --browser chrome",
     "cy:run:headless": "cypress run --headless --browser chrome",
-    "test": "CI=true cypress run --browser chromium --headed false",
+    "test": "npx cypress run --headless --browser chrome --no-sandbox --disable-gpu --disable-dev-shm-usage --disable-setuid-sandbox",
     "report:merge": "mochawesome-merge cypress/reports/mochawesome/*.json > mochawesome.json",
     "report:generate": "marge mochawesome.json --reportDir mochawesome-report --inline",
     "report:clean": "rm -rf mochawesome.json mochawesome-report cypress/reports",
