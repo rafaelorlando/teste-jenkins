@@ -7,7 +7,7 @@
     "cy:open": "cypress open",
     "cy:run": "cypress run --headless --browser chrome",
     "cy:run:headless": "cypress run --headless --browser chrome",
-    "test": "CYPRESS_VERIFY_TIMEOUT=100000 CI=true cypress run --browser electron --headless",
+    "test": "CI=true cypress run --browser chromium --headed false",
     "report:merge": "mochawesome-merge cypress/reports/mochawesome/*.json > mochawesome.json",
     "report:generate": "marge mochawesome.json --reportDir mochawesome-report --inline",
     "report:clean": "rm -rf mochawesome.json mochawesome-report cypress/reports",
